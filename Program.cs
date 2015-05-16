@@ -10,7 +10,7 @@ namespace AlgorithmExamples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Quick test.");
+            Console.WriteLine("Quick test. ##");
         }
     }
 }
