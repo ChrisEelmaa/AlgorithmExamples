@@ -10,9 +10,10 @@ namespace AlgorithmExamples.Sorting
 
         protected bool IsFirstBiggerThanSecond(T first, T second)
         {
-            // TODO; investigat unit tests, and how they handle NULL\s.
+            // null handling.
+            if (first == null && second == null) return false;
             if (first == null) return false;
-            if (second == null) return false;
+            if (second == null) return true;
 
             var result = first.CompareTo(second);
             return result > 0;
@@ -20,8 +21,8 @@ namespace AlgorithmExamples.Sorting
 
         protected bool IsSecondBiggerThanFirst(T first, T second)
         {
-            // TODO; investigat unit tests, and how they handle NULL\s.
-            if (first == null) return false;
+            if (first == null && second == null) return false;
+            if (first == null) return true;
             if (second == null) return false;
 
             var result = first.CompareTo(second);
