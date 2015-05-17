@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AlgorithmExamples.Sorting
+namespace AlgorithmExamples.Sorting.ComparisonBased
 {
-    public class SelectionSort<T> : ComparisonBasedAlgorithm<T>
+    public class SelectionSort<T> : ComparisonBasedSortAlgorithm<T>
         where T : IComparable<T>
     {
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
@@ -37,12 +37,12 @@ namespace AlgorithmExamples.Sorting
                 // Once the above loop is done,
                 // we have found the biggest element index.
                 // All we have to do now, is to swap with previous one 
-                sortedItems++;
                 Swap(ref input[best], ref input[i - 1]);
 
                 // we have sorted every element except the first one,
                 // however, if you think about it,
-                // the first element is then ALSO sorted. 
+                // the first element is then ALSO sorted
+                sortedItems++; 
                 if (input.Length - 1 == sortedItems)
                     break;
             }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AlgorithmExamples.Sorting
+namespace AlgorithmExamples.Sorting.ComparisonBased
 {
-    public abstract class ComparisonBasedAlgorithm<T> : IComparisonBasedSortAlgorithm<T>
+    public abstract class ComparisonBasedSortAlgorithm<T> 
         where T : IComparable<T>
     {
         protected abstract IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection);

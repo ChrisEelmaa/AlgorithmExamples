@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AlgorithmExamples.Sorting
+namespace AlgorithmExamples.Sorting.ComparisonBased
 {
-    public sealed class BubbleSort<T> : ComparisonBasedAlgorithm<T> where T : IComparable<T>
+    public sealed class BubbleSort<T> : 
+        ComparisonBasedSortAlgorithm<T> where T : IComparable<T>
     {
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {

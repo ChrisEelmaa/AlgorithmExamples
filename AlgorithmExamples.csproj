@@ -46,15 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sorting\BubbleSort.cs" />
-    <Compile Include="Sorting\ComparisonBasedAlgorithm.cs" />
-    <Compile Include="Sorting\IComparisonBasedSortAlgorithm.cs" />
-    <Compile Include="Sorting\SelectionSort.cs" />
+    <Compile Include="Sorting\ComparisonBased\BubbleSort.cs" />
+    <Compile Include="Sorting\ComparisonBased\ComparisonBasedAlgorithm.cs" />
+    <Compile Include="Sorting\ComparisonBased\IComparisonBasedSortAlgorithm.cs" />
+    <Compile Include="Sorting\ComparisonBased\SelectionSort.cs" />
     <Compile Include="Sorting\SortDirection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

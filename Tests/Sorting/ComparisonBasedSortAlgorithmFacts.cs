@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AlgorithmExamples.Sorting;
+using AlgorithmExamples.Sorting.ComparisonBased;
 using Tests.Sorting.Input;
 using Xunit;
 
@@ -24,7 +25,7 @@ namespace Tests.Sorting
     {
         [Theory, MemberData("GetData")]
         public void Should_Sort_Data_Correctly_Ascending(
-            IComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input)
         {
             TestSorting(sortingAlgorithm, input, SortDirection.Ascending);
@@ -32,7 +33,7 @@ namespace Tests.Sorting
 
         [Theory, MemberData("GetData")]
         public void Should_Sort_Data_Correctly_Descending(
-            IComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input)
         {
             TestSorting(sortingAlgorithm, input, SortDirection.Descending);
@@ -40,7 +41,7 @@ namespace Tests.Sorting
 
 
         protected void TestSorting(
-            IComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input,
             SortDirection direction)
         {

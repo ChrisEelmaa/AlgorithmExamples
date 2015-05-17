@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AlgorithmExamples.Sorting;
+using AlgorithmExamples.Sorting.ComparisonBased;
 
 namespace Tests.Sorting.Input
 {
@@ -11,11 +12,11 @@ namespace Tests.Sorting.Input
     {
         protected abstract IEnumerable<T[]> GetData();
 
-        private static IEnumerable<IComparisonBasedSortAlgorithm<T>> Implementations
+        private static IEnumerable<ComparisonBasedSortAlgorithm<T>> Implementations
         {
             get
             {
-                return new IComparisonBasedSortAlgorithm<T>[]
+                return new ComparisonBasedSortAlgorithm<T>[]
                 {
                     // Would be cool if this was dynamic,
                     // however, updating this manually is not too bad.
