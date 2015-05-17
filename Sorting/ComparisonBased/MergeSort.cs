@@ -26,57 +26,9 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
             var firstSegment = new ArraySegment<T>(input, 0, middle).ToArray();
             var secondSegment = new ArraySegment<T>(input, middle, input.Length - middle).ToArray();
 
-            return Merge(
+            return AlgorithmHelper.Merge(
                 SortInternal(firstSegment).ToArray(), 
                 SortInternal(secondSegment).ToArray());
-        }
-
-
-        private T[] Merge(T[] first, T[] second)
-        {
-            var output = new T[first.Length + second.Length];
-            var defaultEqualityComparer = EqualityComparer<T>.Default;
-            
-            int firstPointer = 0;
-            int secondPointer = 0;
-            int outputPointer = 0;
-
-            while (true)
-            {
-                var isFirstPointerValid = firstPointer < first.Length;
-                var isSecondPointerValid = secondPointer < second.Length;
-                if (!isFirstPointerValid && !isSecondPointerValid)
-                    break;
-
-                if (isFirstPointerValid && isSecondPointerValid)
-                {
-                    if (defaultEqualityComparer.Equals(first[firstPointer], second[secondPointer]))
-                    {
-                        output[outputPointer++] = first[firstPointer++];
-                        output[outputPointer++] = second[secondPointer++];
-                        continue;
-                    }
-
-                    var max = AlgorithmHelper.Min(first[firstPointer], second[secondPointer]);
-                    output[outputPointer++] = defaultEqualityComparer.Equals(first[firstPointer], max)
-                        ? first[firstPointer++]
-                        : second[secondPointer++];
-                }
-                else
-                {
-                    var currentPointer = isFirstPointerValid ? firstPointer : secondPointer;
-                    var array = isFirstPointerValid ? first : second;
-
-                    for (; currentPointer < array.Length; currentPointer++)
-                    {
-                        output[outputPointer++] = array[currentPointer];
-                    }
-
-                    break;
-                }
-            }
-
-            return output;
         }
 
         #region IAlgorithmImplementation
