@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace AlgorithmExamples.Sorting.ComparisonBased
 {
-    public class SelectionSort<T> : ComparisonBasedSortAlgorithm<T>
+    [ProvideSourceLocation]
+    public class SelectionSort<T> : ComparisonBasedSortAlgorithm<T>,
+        IAlgorithmImplementation
         where T : IComparable<T>
     {
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
@@ -49,5 +52,42 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 
             return input;
         }
+
+        #region IAlgorithmImplementation members
+
+        public Author Author
+        {
+            get { return Author.ErtiChrisEelmaa; }
+        }
+
+        public DifficultyLevel Level
+        {
+            get { return DifficultyLevel.VeryEasy;}
+        }
+
+        public AsymptoticWorstCaseTimeComplexity Complexity
+        {
+            get {return AsymptoticWorstCaseTimeComplexity.Quadratic; }
+        }
+
+        public AlgorithmCategory Category
+        {
+            get { return AlgorithmCategory.Sorting; }
+        }
+
+        public string Name
+        {
+            get { return "SelectionSort"; }
+        }
+
+        public string Description
+        {
+            get { return 
+@"In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. 
+It has O(n2) time complexity, making it inefficient on large lists, 
+and generally performs worse than the similar insertion sort."; }
+        }
+
+        #endregion
     }
 }

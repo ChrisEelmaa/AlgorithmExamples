@@ -3,8 +3,11 @@ using System.Collections.Generic;
 
 namespace AlgorithmExamples.Sorting.ComparisonBased
 {
+    [ProvideSourceLocation]
     public sealed class BubbleSort<T> : 
-        ComparisonBasedSortAlgorithm<T> where T : IComparable<T>
+        ComparisonBasedSortAlgorithm<T>,
+        IAlgorithmImplementation
+        where T : IComparable<T>
     {
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {
@@ -52,5 +55,44 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 
             return input;
         }
+
+        #region IAlgorithmImplementation members
+
+        public Author Author
+        {
+            get { return Author.ErtiChrisEelmaa; }
+        }
+
+        public DifficultyLevel Level
+        {
+            get { return DifficultyLevel.VeryEasy; }
+        }
+
+        public AsymptoticWorstCaseTimeComplexity Complexity
+        {
+            get { return AsymptoticWorstCaseTimeComplexity.Quadratic; }
+        }
+
+        public AlgorithmCategory Category
+        {
+            get { return AlgorithmCategory.Sorting; }
+        }
+
+        public string Name
+        {
+            get { return "BubbleSort"; }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return
+@"Bubble sort, sometimes referred to as sinking sort, 
+is a simple sorting algorithm that repeatedly steps through the list to be sorted, 
+compares each pair of adjacent items and swaps them if they are in the wrong order.";
+            }
+        }
+        #endregion
     }
 }
