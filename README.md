@@ -25,7 +25,7 @@ My goal is to keep studying/adding new algorithms.
 I'd love this repo to have **1000** algorithms eventually. 
 
 #Overview
-Current progress; **5**/1000 algorithms.
+Current progress; **6**/1000 algorithms.
 
 Amount of tests; TODO.
 
@@ -35,6 +35,14 @@ Amount of tests; TODO.
 Bubble sort, sometimes referred to as sinking sort, 
 is a simple sorting algorithm that repeatedly steps through the list to be sorted, 
 compares each pair of adjacent items and swaps them if they are in the wrong order.
+
+------------
+[HeapSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/HeapSort.cs) 
+
+Heapsort is an in-place algorithm, but it is not a stable sort. 
+Heapsort was invented by J. W. J. Williams in 1964. 
+This was also the birth of the heap, presented already by Williams as a useful data structure in its 
+own right.
 
 ------------
 [InsertionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/InsertionSort.cs) 

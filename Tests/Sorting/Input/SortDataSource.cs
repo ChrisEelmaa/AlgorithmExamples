@@ -26,6 +26,7 @@ namespace Tests.Sorting.Input
                     new InsertionSort<T>(), 
                     new MergeSort<T>(), 
                     new QuickSort<T>(), 
+                    new HeapSort<T>(), 
                 };
             }
         }

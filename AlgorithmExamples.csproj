@@ -35,6 +35,13 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,12 +56,16 @@
     <Compile Include="AsymptoticWorstCaseTimeComplexity.cs" />
     <Compile Include="Author.cs" />
     <Compile Include="AlgorithmCategory.cs" />
+    <Compile Include="DataStructures\BinaryHeap.cs" />
+    <Compile Include="DataStructures\BinaryHeapExtensions.cs" />
+    <Compile Include="DataStructures\BinaryHeapType.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="IAlgorithmImplementation.cs" />
     <Compile Include="IDataStructureImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvideSourceLocationAttribute.cs" />
     <Compile Include="Sorting\ComparisonBased\BubbleSort.cs" />
+    <Compile Include="Sorting\ComparisonBased\HeapSort.cs" />
     <Compile Include="Sorting\ComparisonBased\InsertionSort.cs" />
     <Compile Include="Sorting\ComparisonBased\MergeSort.cs" />
     <Compile Include="Sorting\ComparisonBased\QuickSort.cs" />
@@ -65,9 +76,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataStructures\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

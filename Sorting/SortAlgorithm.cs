@@ -31,23 +31,12 @@ namespace AlgorithmExamples.Sorting
 
         protected bool IsFirstBiggerThanSecond(T first, T second)
         {
-            // null handling.
-            if (first == null && second == null) return false;
-            if (first == null) return false;
-            if (second == null) return true;
-
-            var result = Comparer<T>.Default.Compare(first, second);
-            return result > 0;
+            return AlgorithmHelper.IsFirstBiggerThanSecond(first, second);
         }
 
         protected bool IsSecondBiggerThanFirst(T first, T second)
         {
-            if (first == null && second == null) return false;
-            if (first == null) return true;
-            if (second == null) return false;
-
-            var result = Comparer<T>.Default.Compare(first, second);
-            return result < 0;
+            return AlgorithmHelper.IsSecondBiggerThanFirst(first, second);
         }
 
         #region IAlgorithmImplementation

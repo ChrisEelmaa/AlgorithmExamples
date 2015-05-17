@@ -69,5 +69,26 @@ namespace AlgorithmExamples
         {
             return (Comparer<T>.Default.Compare(x, y) < 0) ? x : y;
         }
+
+        public static bool IsFirstBiggerThanSecond<T>(T first, T second)
+        {
+            // null handling.
+            if (first == null && second == null) return false;
+            if (first == null) return false;
+            if (second == null) return true;
+
+            var result = Comparer<T>.Default.Compare(first, second);
+            return result > 0;
+        }
+
+        public static bool IsSecondBiggerThanFirst<T>(T first, T second)
+        {
+            if (first == null && second == null) return false;
+            if (first == null) return true;
+            if (second == null) return false;
+
+            var result = Comparer<T>.Default.Compare(first, second);
+            return result < 0;
+        }
     }
 }

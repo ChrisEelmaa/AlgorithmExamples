@@ -60,6 +60,10 @@ namespace AlgorithmExamples.DocumentationGenerator
             if (type == typeof(QuickSort<>))
                 return new QuickSort<int>();
 
+
+            if (type == typeof(HeapSort<>))
+                return new HeapSort<int>();
+
             return Activator.CreateInstance(type);
         }
     }
