@@ -5,7 +5,6 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
     public class InsertionSort<T> : SortAlgorithm<T>
-        where T : IComparable<T>
     {
         public override bool IsStableSort
         {
@@ -17,7 +16,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
             get { return true; }
         }
 
-        protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
+        protected override IEnumerable<T> SortInternal(T[] input)
         {
             var sortedItems = 1;
 
@@ -27,19 +26,10 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                 while (k > 0)
                 {
                     bool swapDone = false;
-                    if(sortDirection == SortDirection.Descending &&
-                        IsFirstBiggerThanSecond(input[k], input[k - 1]))
+                    if (IsSecondBiggerThanFirst(input[k], input[k - 1]))
                     {
-                        swapDone = true;
                         AlgorithmHelper.Swap(ref input[k], ref input[k - 1]);
-                        k--;
-                    }
-
-                    if (sortDirection == SortDirection.Ascending &&
-                        IsSecondBiggerThanFirst(input[k], input[k - 1]))
-                    {
                         swapDone = true;
-                        AlgorithmHelper.Swap(ref input[k], ref input[k - 1]);
                         k--;
                     }
 

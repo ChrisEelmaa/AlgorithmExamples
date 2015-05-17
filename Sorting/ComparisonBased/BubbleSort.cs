@@ -4,9 +4,7 @@ using System.Collections.Generic;
 namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
-    public sealed class BubbleSort<T> : 
-        SortAlgorithm<T>
-        where T : IComparable<T>
+    public sealed class BubbleSort<T> : SortAlgorithm<T>
     {
         public override bool IsStableSort
         {
@@ -18,7 +16,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
             get { return true; }
         }
 
-        protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
+        protected override IEnumerable<T> SortInternal(T[] input)
         {
             bool __EVER__ = true;
 
@@ -33,15 +31,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                 // with the next element, until it finds it's place.
                 for (var k = 0; k < indexOfElementBeforeLast - sortedElements; k++)
                 {
-                    if (IsFirstBiggerThanSecond(input[k], input[k + 1]) &&
-                        sortDirection == SortDirection.Ascending)
-                    {
-                        AlgorithmHelper.Swap(ref input[k], ref input[k + 1]);
-                        swapDone = true;
-                    }
-
-                    if (IsSecondBiggerThanFirst(input[k], input[k + 1]) &&
-                        sortDirection == SortDirection.Descending)
+                    if (IsFirstBiggerThanSecond(input[k], input[k + 1]))
                     {
                         AlgorithmHelper.Swap(ref input[k], ref input[k + 1]);
                         swapDone = true;

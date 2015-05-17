@@ -6,12 +6,11 @@ namespace AlgorithmExamples.Sorting
 {
     public abstract class SortAlgorithm<T>  :
         IAlgorithmImplementation
-        where T : IComparable<T>
     {
         public abstract bool IsStableSort { get; }
         public abstract bool IsInPlace { get; }
 
-        protected abstract IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection);
+        protected abstract IEnumerable<T> SortInternal(T[] input);
 
         public IEnumerable<T> Sort(
             IReadOnlyList<T> input, 
@@ -23,7 +22,11 @@ namespace AlgorithmExamples.Sorting
             if (input.Count <= 1)
                 return input;
 
-            return SortInternal(input.ToArray(), sortDirection);
+            var output = SortInternal(input.ToArray());
+            if (sortDirection == SortDirection.Descending)
+                output = output.Reverse();
+
+            return output;
         }
 
         protected bool IsFirstBiggerThanSecond(T first, T second)
@@ -33,7 +36,7 @@ namespace AlgorithmExamples.Sorting
             if (first == null) return false;
             if (second == null) return true;
 
-            var result = first.CompareTo(second);
+            var result = Comparer<T>.Default.Compare(first, second);
             return result > 0;
         }
 
@@ -43,7 +46,7 @@ namespace AlgorithmExamples.Sorting
             if (first == null) return true;
             if (second == null) return false;
 
-            var result = first.CompareTo(second);
+            var result = Comparer<T>.Default.Compare(first, second);
             return result < 0;
         }
 

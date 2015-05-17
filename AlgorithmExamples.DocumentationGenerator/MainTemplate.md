@@ -5,6 +5,8 @@ on different data structures, which I have also implemented.
 In the sense, this project can also be used to learn more about data structures,
 however, that is not the main focus of this project.
 
+**These algorithms are used only for studying. This is not an actual C# algorithm library.**
+
 I have provided unit tests (xUnit). These make sure that algorithms are mainly correct (I hope they're 100% correct, but you can never be sure. 
 
 **Dependencies:**

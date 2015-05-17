@@ -23,6 +23,7 @@ namespace Tests.Sorting.Input
                     new BubbleSort<T>(),
                     new SelectionSort<T>(), 
                     new InsertionSort<T>(), 
+                    new MergeSort<T>(), 
                 };
             }
         }

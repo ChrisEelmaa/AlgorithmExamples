@@ -44,6 +44,7 @@ namespace AlgorithmExamples.DocumentationGenerator
 
         private object Create(Type type)
         {
+            // TODO; wtf is this shit.
             if (type == typeof(BubbleSort<>))
                 return new BubbleSort<int>();
 
@@ -52,6 +53,9 @@ namespace AlgorithmExamples.DocumentationGenerator
 
             if (type == typeof (InsertionSort<>))
                 return new InsertionSort<int>();
+
+            if (type == typeof(MergeSort<>))
+                return new MergeSort<int>();
 
             return Activator.CreateInstance(type);
         }

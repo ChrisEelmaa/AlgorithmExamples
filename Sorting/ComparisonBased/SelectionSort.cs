@@ -5,7 +5,6 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
     public class SelectionSort<T> : SortAlgorithm<T>
-        where T : IComparable<T>
     {
         public override bool IsStableSort
         {
@@ -17,7 +16,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
             get { return true; }
         }
 
-        protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
+        protected override IEnumerable<T> SortInternal(T[] input)
         {
             // Selection sort might be the easiest sort algorithm.
             // Atleast, to understand.
@@ -32,14 +31,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                 int i;
                 for (i = 1; i < input.Length - sortedItems; i++)
                 {
-                    if (IsFirstBiggerThanSecond(input[best], input[i]) &&
-                        sortDirection == SortDirection.Descending)
-                    {
-                        best = i;
-                    }
-
-                    if (IsSecondBiggerThanFirst(input[best], input[i]) &&
-                        sortDirection == SortDirection.Ascending)
+                    if (IsSecondBiggerThanFirst(input[best], input[i]))
                     {
                         best = i;
                     }

@@ -5,6 +5,8 @@ on different data structures, which I have also implemented.
 In the sense, this project can also be used to learn more about data structures,
 however, that is not the main focus of this project.
 
+**These algorithms are used only for studying. This is not an actual C# algorithm library.**
+
 I have provided unit tests (xUnit). These make sure that algorithms are mainly correct (I hope they're 100% correct, but you can never be sure. 
 
 **Dependencies:**
@@ -18,7 +20,7 @@ Hope you find this as useful, as I did when I wrote the stuff :). This is an on-
 My goal is to keep studying/adding new algorithms. I'd love this repo that have 1000 algorithms eventually. 
 
 #Overview
-Current progress; **3**/1000 algorithms.
+Current progress; **4**/1000 algorithms.
 
 Amount of tests; TODO.
 
@@ -35,6 +37,12 @@ compares each pair of adjacent items and swaps them if they are in the wrong ord
 Insertion sort is an elementary sorting algorithm that sorts one element at a time. 
 Most humans, when sorting a deck of cards, will use a strategy similar to insertion sort. 
 The algorithm takes an element from the list and places it in the correct location in the list.
+
+------------
+[MergeSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/MergeSort.cs) 
+
+A sort algorithm that splits the items to be sorted into two groups, recursively sorts each group, 
+and merges them into a final, sorted sequence. Run time is Θ(n log n).
 
 ------------
 [SelectionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/SelectionSort.cs) 
