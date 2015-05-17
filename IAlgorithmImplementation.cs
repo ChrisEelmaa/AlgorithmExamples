@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace AlgorithmExamples
+﻿namespace AlgorithmExamples
 {
     public interface IAlgorithmImplementation
     {

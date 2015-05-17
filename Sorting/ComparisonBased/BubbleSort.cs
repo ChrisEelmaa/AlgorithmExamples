@@ -5,10 +5,19 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
     public sealed class BubbleSort<T> : 
-        ComparisonBasedSortAlgorithm<T>,
-        IAlgorithmImplementation
+        SortAlgorithm<T>
         where T : IComparable<T>
     {
+        public override bool IsStableSort
+        {
+            get { return true; }
+        }
+
+        public override bool IsInPlace
+        {
+            get { return true; }
+        }
+
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {
             bool __EVER__ = true;
@@ -27,14 +36,14 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                     if (IsFirstBiggerThanSecond(input[k], input[k + 1]) &&
                         sortDirection == SortDirection.Ascending)
                     {
-                        Swap(ref input[k], ref input[k + 1]);
+                        AlgorithmHelper.Swap(ref input[k], ref input[k + 1]);
                         swapDone = true;
                     }
 
                     if (IsSecondBiggerThanFirst(input[k], input[k + 1]) &&
                         sortDirection == SortDirection.Descending)
                     {
-                        Swap(ref input[k], ref input[k + 1]);
+                        AlgorithmHelper.Swap(ref input[k], ref input[k + 1]);
                         swapDone = true;
                     }
                 }
@@ -58,32 +67,32 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 
         #region IAlgorithmImplementation members
 
-        public Author Author
+        public override Author Author
         {
             get { return Author.ErtiChrisEelmaa; }
         }
 
-        public DifficultyLevel Level
+        public override DifficultyLevel Level
         {
             get { return DifficultyLevel.VeryEasy; }
         }
 
-        public AsymptoticWorstCaseTimeComplexity Complexity
+        public override AsymptoticWorstCaseTimeComplexity Complexity
         {
             get { return AsymptoticWorstCaseTimeComplexity.Quadratic; }
         }
 
-        public AlgorithmCategory Category
+        public override AlgorithmCategory Category
         {
             get { return AlgorithmCategory.Sorting; }
         }
 
-        public string Name
+        public override string Name
         {
             get { return "BubbleSort"; }
         }
 
-        public string Description
+        public override string Description
         {
             get
             {

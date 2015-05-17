@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgorithmHelper.cs" />
     <Compile Include="AsymptoticWorstCaseTimeComplexity.cs" />
     <Compile Include="Author.cs" />
     <Compile Include="AlgorithmCategory.cs" />
@@ -54,9 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvideSourceLocationAttribute.cs" />
     <Compile Include="Sorting\ComparisonBased\BubbleSort.cs" />
-    <Compile Include="Sorting\ComparisonBased\ComparisonBasedSortAlgorithm.cs" />
     <Compile Include="Sorting\ComparisonBased\InsertionSort.cs" />
     <Compile Include="Sorting\ComparisonBased\SelectionSort.cs" />
+    <Compile Include="Sorting\SortAlgorithm.cs" />
     <Compile Include="Sorting\SortDirection.cs" />
   </ItemGroup>
   <ItemGroup>

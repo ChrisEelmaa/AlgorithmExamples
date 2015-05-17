@@ -12,11 +12,11 @@ namespace Tests.Sorting.Input
     {
         protected abstract IEnumerable<T[]> GetData();
 
-        private static IEnumerable<ComparisonBasedSortAlgorithm<T>> Implementations
+        private static IEnumerable<SortAlgorithm<T>> Implementations
         {
             get
             {
-                return new ComparisonBasedSortAlgorithm<T>[]
+                return new SortAlgorithm<T>[]
                 {
                     // Would be cool if this was dynamic,
                     // however, updating this manually is not too bad.

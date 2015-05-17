@@ -25,7 +25,7 @@ namespace Tests.Sorting
     {
         [Theory, MemberData("GetData")]
         public void Should_Sort_Data_Correctly_Ascending(
-            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            SortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input)
         {
             TestSorting(sortingAlgorithm, input, SortDirection.Ascending);
@@ -33,7 +33,7 @@ namespace Tests.Sorting
 
         [Theory, MemberData("GetData")]
         public void Should_Sort_Data_Correctly_Descending(
-            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            SortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input)
         {
             TestSorting(sortingAlgorithm, input, SortDirection.Descending);
@@ -41,7 +41,7 @@ namespace Tests.Sorting
 
 
         protected void TestSorting(
-            ComparisonBasedSortAlgorithm<TDataType> sortingAlgorithm,
+            SortAlgorithm<TDataType> sortingAlgorithm,
             IReadOnlyList<TDataType> input,
             SortDirection direction)
         {
@@ -54,6 +54,8 @@ namespace Tests.Sorting
 
             // xUnit actually recognizes that we are dealing with collections,
             // thus verifies that both sequences are equal!
+            // TODO; implement the dependency on SortAlgorithm.IsStableSort property,
+            // when doing assert.
             Assert.Equal(expectedOutput, actualOutput);
         }
 

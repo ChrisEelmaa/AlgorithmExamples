@@ -4,10 +4,19 @@ using System.Collections.Generic;
 namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
-    public class InsertionSort<T> : ComparisonBasedSortAlgorithm<T>,
-        IAlgorithmImplementation
+    public class InsertionSort<T> : SortAlgorithm<T>
         where T : IComparable<T>
     {
+        public override bool IsStableSort
+        {
+            get { return true; }
+        }
+
+        public override bool IsInPlace
+        {
+            get { return true; }
+        }
+
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {
             var sortedItems = 1;
@@ -22,7 +31,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                         IsFirstBiggerThanSecond(input[k], input[k - 1]))
                     {
                         swapDone = true;
-                        Swap(ref input[k], ref input[k - 1]);
+                        AlgorithmHelper.Swap(ref input[k], ref input[k - 1]);
                         k--;
                     }
 
@@ -30,7 +39,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                         IsSecondBiggerThanFirst(input[k], input[k - 1]))
                     {
                         swapDone = true;
-                        Swap(ref input[k], ref input[k - 1]);
+                        AlgorithmHelper.Swap(ref input[k], ref input[k - 1]);
                         k--;
                     }
 
@@ -49,32 +58,32 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 
         #region IAlgorithmImplementation members
 
-        public Author Author
+        public override Author Author
         {
             get { return Author.ErtiChrisEelmaa; }
         }
 
-        public DifficultyLevel Level
+        public override DifficultyLevel Level
         {
             get { return DifficultyLevel.VeryEasy; }
         }
 
-        public AsymptoticWorstCaseTimeComplexity Complexity
+        public override AsymptoticWorstCaseTimeComplexity Complexity
         {
             get { return AsymptoticWorstCaseTimeComplexity.Quadratic; }
         }
 
-        public AlgorithmCategory Category
+        public override AlgorithmCategory Category
         {
             get { return AlgorithmCategory.Sorting; }
         }
 
-        public string Name
+        public override string Name
         {
             get { return "InsertionSort"; }
         }
 
-        public string Description
+        public override string Description
         {
             get
             {

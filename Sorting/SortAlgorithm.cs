@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AlgorithmExamples.Sorting.ComparisonBased
+namespace AlgorithmExamples.Sorting
 {
-    public abstract class ComparisonBasedSortAlgorithm<T> 
+    public abstract class SortAlgorithm<T>  :
+        IAlgorithmImplementation
         where T : IComparable<T>
     {
+        public abstract bool IsStableSort { get; }
+        public abstract bool IsInPlace { get; }
+
         protected abstract IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection);
 
-        public IEnumerable<T> Sort(IReadOnlyList<T> input, SortDirection sortDirection)
+        public IEnumerable<T> Sort(
+            IReadOnlyList<T> input, 
+            SortDirection sortDirection)
         {
             if(input == null)
                 throw new ArgumentNullException("input");
@@ -41,11 +47,15 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
             return result < 0;
         }
 
-        protected static void Swap(ref T first, ref T second)
-        {
-            var temp = first;
-            first = second;
-            second = temp;
-        }
+        #region IAlgorithmImplementation
+
+        public abstract Author Author { get; }
+        public abstract DifficultyLevel Level { get; }
+        public abstract AsymptoticWorstCaseTimeComplexity Complexity { get; }
+        public abstract AlgorithmCategory Category { get; }
+        public abstract string Name { get; }
+        public abstract string Description { get; }
+
+        #endregion
     }
 }

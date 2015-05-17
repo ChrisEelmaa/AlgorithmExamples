@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
 namespace AlgorithmExamples.Sorting.ComparisonBased
 {
     [ProvideSourceLocation]
-    public class SelectionSort<T> : ComparisonBasedSortAlgorithm<T>,
-        IAlgorithmImplementation
+    public class SelectionSort<T> : SortAlgorithm<T>
         where T : IComparable<T>
     {
+        public override bool IsStableSort
+        {
+            get { return true; }
+        }
+
+        public override bool IsInPlace
+        {
+            get { return true; }
+        }
+
         protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {
             // Selection sort might be the easiest sort algorithm.
@@ -40,7 +48,7 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
                 // Once the above loop is done,
                 // we have found the biggest element index.
                 // All we have to do now, is to swap with previous one 
-                Swap(ref input[best], ref input[i - 1]);
+                AlgorithmHelper.Swap(ref input[best], ref input[i - 1]);
 
                 // we have sorted every element except the first one,
                 // however, if you think about it,
@@ -55,32 +63,32 @@ namespace AlgorithmExamples.Sorting.ComparisonBased
 
         #region IAlgorithmImplementation members
 
-        public Author Author
+        public override Author Author
         {
             get { return Author.ErtiChrisEelmaa; }
         }
 
-        public DifficultyLevel Level
+        public override DifficultyLevel Level
         {
             get { return DifficultyLevel.VeryEasy;}
         }
 
-        public AsymptoticWorstCaseTimeComplexity Complexity
+        public override AsymptoticWorstCaseTimeComplexity Complexity
         {
             get {return AsymptoticWorstCaseTimeComplexity.Quadratic; }
         }
 
-        public AlgorithmCategory Category
+        public override AlgorithmCategory Category
         {
             get { return AlgorithmCategory.Sorting; }
         }
 
-        public string Name
+        public override string Name
         {
             get { return "SelectionSort"; }
         }
 
-        public string Description
+        public override string Description
         {
             get { return 
 @"In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. 
