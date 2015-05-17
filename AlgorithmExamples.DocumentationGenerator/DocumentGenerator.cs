@@ -57,6 +57,9 @@ namespace AlgorithmExamples.DocumentationGenerator
             if (type == typeof(MergeSort<>))
                 return new MergeSort<int>();
 
+            if (type == typeof(QuickSort<>))
+                return new QuickSort<int>();
+
             return Activator.CreateInstance(type);
         }
     }

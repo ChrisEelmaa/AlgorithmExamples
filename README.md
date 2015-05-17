@@ -21,10 +21,11 @@ I have provided unit tests (xUnit). These make sure that algorithms are mainly c
 
 Hope you find this as useful, as I did when I wrote the stuff :). This is an on-going project, which will last for years. 
 
-My goal is to keep studying/adding new algorithms. I'd love this repo that have 1000 algorithms eventually. 
+My goal is to keep studying/adding new algorithms. 
+I'd love this repo to have **1000** algorithms eventually. 
 
 #Overview
-Current progress; **4**/1000 algorithms.
+Current progress; **5**/1000 algorithms.
 
 Amount of tests; TODO.
 
@@ -47,6 +48,14 @@ The algorithm takes an element from the list and places it in the correct locati
 
 A sort algorithm that splits the items to be sorted into two groups, recursively sorts each group, 
 and merges them into a final, sorted sequence. Run time is Θ(n log n).
+
+------------
+[QuickSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/QuickSort.cs) 
+
+The best sorting algorithm which implements the ‘divide and conquer’ concept. 
+It first divides the list into two parts by picking an element a ’pivot’. 
+It then arranges the elements those are smaller than pivot into one sub list and the 
+elements those are greater than pivot into one sub list by keeping the pivot in its original place.
 
 ------------
 [SelectionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/SelectionSort.cs) 

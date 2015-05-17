@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using AlgorithmExamples.Sorting;
 using AlgorithmExamples.Sorting.ComparisonBased;
 
@@ -24,6 +25,7 @@ namespace Tests.Sorting.Input
                     new SelectionSort<T>(), 
                     new InsertionSort<T>(), 
                     new MergeSort<T>(), 
+                    new QuickSort<T>(), 
                 };
             }
         }
