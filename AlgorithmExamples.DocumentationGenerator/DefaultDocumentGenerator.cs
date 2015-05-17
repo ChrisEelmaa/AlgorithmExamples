@@ -35,7 +35,10 @@ namespace AlgorithmExamples.DocumentationGenerator
             foreach (var implementation in Implementations)
             {
                 var path = GithubHelper.GetSourceCodeFilePathForImplementation(implementation);
-                sb.Append(string.Format(overview, implementation.Name, path));
+                sb.Append(string.Format(overview, 
+                    implementation.Name, 
+                    path, 
+                    implementation.Description));
             }
 
             Data.Replace("{Implementations}", sb.ToString());

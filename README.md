@@ -21,6 +21,16 @@ Amount of tests; TODO.
 # Implementations
 [BubbleSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/BubbleSort.cs) 
 
+Bubble sort, sometimes referred to as sinking sort, 
+is a simple sorting algorithm that repeatedly steps through the list to be sorted, 
+compares each pair of adjacent items and swaps them if they are in the wrong order.
+
+------------
 [SelectionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/SelectionSort.cs) 
 
+In computer science, selection sort is a sorting algorithm, specifically an in-place comparison sort. 
+It has O(n2) time complexity, making it inefficient on large lists, 
+and generally performs worse than the similar insertion sort.
+
+------------
 
