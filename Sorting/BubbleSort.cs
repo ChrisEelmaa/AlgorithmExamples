@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace AlgorithmExamples.Sorting
 {
     public sealed class BubbleSort<T> : ComparisonBasedAlgorithm<T> where T : IComparable<T>
     {
-        public override IEnumerable<T> Sort(IReadOnlyList<T> input, SortDirection sortDirection)
-        {
-            return SortInternal(input.ToArray(), sortDirection);
-        }
-
-        private IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
+        protected override IEnumerable<T> SortInternal(T[] input, SortDirection sortDirection)
         {
             bool __EVER__ = true;
 

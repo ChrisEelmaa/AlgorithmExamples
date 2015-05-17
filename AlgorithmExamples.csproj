@@ -49,6 +49,7 @@
     <Compile Include="Sorting\BubbleSort.cs" />
     <Compile Include="Sorting\ComparisonBasedAlgorithm.cs" />
     <Compile Include="Sorting\IComparisonBasedSortAlgorithm.cs" />
+    <Compile Include="Sorting\SelectionSort.cs" />
     <Compile Include="Sorting\SortDirection.cs" />
   </ItemGroup>
   <ItemGroup>

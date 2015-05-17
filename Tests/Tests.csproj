@@ -66,8 +66,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\ComparisonBasedSortAlgorithmFacts.cs" />
     <Compile Include="Sorting\Input\IntegerSortDataSource.cs" />
+    <Compile Include="Sorting\Input\SortDataSource.cs" />
     <Compile Include="Sorting\Input\StringSortDataSource.cs" />
-    <Compile Include="Sorting\SortDataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmExamples.csproj">

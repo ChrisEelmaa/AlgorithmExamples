@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AlgorithmExamples.Sorting;
 
-namespace Tests.Sorting
+namespace Tests.Sorting.Input
 {
     public abstract class SortDataSource<T> : IEnumerable<object[]> 
         where T : IComparable<T>
@@ -15,11 +15,12 @@ namespace Tests.Sorting
         {
             get
             {
-                return new[]
+                return new IComparisonBasedSortAlgorithm<T>[]
                 {
                     // Would be cool if this was dynamic,
                     // however, updating this manually is not too bad.
-                    new BubbleSort<T>()
+                    new BubbleSort<T>(),
+                    new SelectionSort<T>(), 
                 };
             }
         }
