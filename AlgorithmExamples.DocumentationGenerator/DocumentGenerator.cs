@@ -50,6 +50,9 @@ namespace AlgorithmExamples.DocumentationGenerator
             if (type == typeof(SelectionSort<>))
                 return new SelectionSort<int>();
 
+            if (type == typeof (InsertionSort<>))
+                return new InsertionSort<int>();
+
             return Activator.CreateInstance(type);
         }
     }

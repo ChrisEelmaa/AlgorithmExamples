@@ -14,7 +14,7 @@ Hope you find this as useful, as I did when I wrote the stuff :). This is an on-
 My goal is to keep studying/adding new algorithms. I'd love this repo that have 1000 algorithms eventually. 
 
 #Overview
-Current progress; **2**/1000 algorithms.
+Current progress; **3**/1000 algorithms.
 
 Amount of tests; TODO.
 
@@ -24,6 +24,13 @@ Amount of tests; TODO.
 Bubble sort, sometimes referred to as sinking sort, 
 is a simple sorting algorithm that repeatedly steps through the list to be sorted, 
 compares each pair of adjacent items and swaps them if they are in the wrong order.
+
+------------
+[InsertionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/InsertionSort.cs) 
+
+Insertion sort is an elementary sorting algorithm that sorts one element at a time. 
+Most humans, when sorting a deck of cards, will use a strategy similar to insertion sort. 
+The algorithm takes an element from the list and places it in the correct location in the list.
 
 ------------
 [SelectionSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/SelectionSort.cs) 

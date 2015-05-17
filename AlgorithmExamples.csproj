@@ -55,6 +55,7 @@
     <Compile Include="ProvideSourceLocationAttribute.cs" />
     <Compile Include="Sorting\ComparisonBased\BubbleSort.cs" />
     <Compile Include="Sorting\ComparisonBased\ComparisonBasedSortAlgorithm.cs" />
+    <Compile Include="Sorting\ComparisonBased\InsertionSort.cs" />
     <Compile Include="Sorting\ComparisonBased\SelectionSort.cs" />
     <Compile Include="Sorting\SortDirection.cs" />
   </ItemGroup>

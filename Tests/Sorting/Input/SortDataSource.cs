@@ -22,6 +22,7 @@ namespace Tests.Sorting.Input
                     // however, updating this manually is not too bad.
                     new BubbleSort<T>(),
                     new SelectionSort<T>(), 
+                    new InsertionSort<T>(), 
                 };
             }
         }

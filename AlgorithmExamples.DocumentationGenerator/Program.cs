@@ -4,7 +4,7 @@ namespace AlgorithmExamples.DocumentationGenerator
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             DocumentGenerator gen = new DefaultDocumentGenerator();
             string output = gen.Generate();
