@@ -25,11 +25,20 @@ My goal is to keep studying/adding new algorithms.
 I'd love this repo to have **1000** algorithms eventually. 
 
 #Overview
-Current progress; **6**/1000 algorithms.
+Current progress; **7**/1000 algorithms.
 
 Amount of tests; TODO.
 
 # Implementations
+[Maximum subarray](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Misc/MaximumSubArray.cs) 
+
+In computer science, the maximum subarray problem is the task of finding the contiguous subarray 
+within a one-dimensional array of numbers (containing at least one positive number) 
+which has the largest sum. For example, for the sequence of 
+values −2, 1, −3, 4, −1, 2, 1, −5, 4; the contiguous subarray with 
+the largest sum is 4, −1, 2, 1, with sum 6.
+
+------------
 [BubbleSort](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Sorting/ComparisonBased/BubbleSort.cs) 
 
 Bubble sort, sometimes referred to as sinking sort, 
