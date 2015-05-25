@@ -72,6 +72,9 @@
   <ItemGroup>
     <Compile Include="AlgorithmHelperTests.cs" />
     <Compile Include="DataStructures\BinaryHeapFacts.cs" />
+    <Compile Include="Maths\FactorialFacts.cs" />
+    <Compile Include="Maths\FibonacciSequenceFacts.cs" />
+    <Compile Include="Misc\BinarySearchFacts.cs" />
     <Compile Include="Misc\MaximumSubArrayFacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting\ComparisonBasedSortAlgorithmFacts.cs" />

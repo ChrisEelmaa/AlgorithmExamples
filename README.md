@@ -25,11 +25,31 @@ My goal is to keep studying/adding new algorithms.
 I'd love this repo to have **1000** algorithms eventually. 
 
 #Overview
-Current progress; **7**/1000 algorithms.
+Current progress; **10**/1000 algorithms.
 
 Amount of tests; TODO.
 
 # Implementations
+[Factorial](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Maths/Factorial.cs) 
+
+In mathematics, the factorial of a non-negative integer n, denoted by n!, 
+is the product of all positive integers less than or equal to n. 
+
+------------
+[FibonacciSequence sequence](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Maths/FibonacciSequence.cs) 
+
+The FibonacciSequence sequence is a series of numbers where a number is found by 
+adding up the two numbers before it. Starting with 0 and 1, 
+the sequence goes 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so forth
+
+------------
+[Binary Search](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Misc/BinarySearch.cs) 
+
+In computer science, a binary search or half-interval search algorithm finds the 
+position of a specified input value (the search 'key') within 
+an array sorted by key value.[1][2]
+
+------------
 [Maximum subarray](https://github.com/ChrisEelmaa/AlgorithmExamples/blob/master/Misc/MaximumSubArray.cs) 
 
 In computer science, the maximum subarray problem is the task of finding the contiguous subarray 

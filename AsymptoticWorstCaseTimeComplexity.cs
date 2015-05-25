@@ -12,5 +12,7 @@
         Quadratic, // O(n^2)
         Cubic, // O(n^3)
         Exponential, // O(a^n)
+
+        Factorial, // O(n!)
     }
 }

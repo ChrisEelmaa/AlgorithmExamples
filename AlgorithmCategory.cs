@@ -7,5 +7,6 @@
         Sorting,
         Graphs,
 
+        Math
     }
 }
